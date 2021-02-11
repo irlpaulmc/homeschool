@@ -1,5 +1,6 @@
 # Tables fun
 import random
+import time
 
 def build_random_array(start, end):
 	"""
@@ -54,6 +55,9 @@ print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 #randomise the questions
 testarray = build_random_array(1,13)
 
+#initialise timer
+starttime = time.time()
+
 #ask the questions
 for question in range(0,12):
 	answer = (testarray[question] + (is_minus * number))
@@ -65,5 +69,7 @@ for question in range(0,12):
 		print("--- INCorrect ---")
 	print ("====================================================================")
 
+endtime=time.time()
 print ("GAME OVER")
 print ("Score: " + str(correct) + "/12")
+print ("elapsed time = " + str(round(endtime-starttime)) + " seconds.")
