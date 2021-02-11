@@ -4,7 +4,7 @@ import time
 
 def build_random_array(start, end):
 	"""
-	start(int), end (int), length(int)
+	start(int), end (int)
 	returns an array with randomised non-repeating
 	numbers in the range between start and end
 	"""
